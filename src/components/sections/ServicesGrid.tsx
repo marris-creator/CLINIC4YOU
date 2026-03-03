@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { DENTAL_SERVICES, BEAUTY_SERVICES } from "@/lib/data";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { fadeInUp, staggerContainer, VIEWPORT } from "@/lib/animations";
 
 export function ServicesGrid() {
   const featuredDental = DENTAL_SERVICES.slice(0, 6);
@@ -13,7 +17,13 @@ export function ServicesGrid() {
       <div className="container-xl">
         {/* Dental */}
         <div className="mb-16">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <motion.div
+            className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT}
+            variants={fadeInUp}
+          >
             <SectionHeading
               eyebrow="Dental Treatments"
               title="Complete Oral Health Care"
@@ -25,12 +35,18 @@ export function ServicesGrid() {
             >
               View all dental services <ArrowRight size={16} />
             </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          </motion.div>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT}
+            variants={staggerContainer}
+          >
             {featuredDental.map((service, i) => (
               <ServiceCard key={service.id} service={service} index={i} />
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Divider */}
@@ -47,7 +63,13 @@ export function ServicesGrid() {
 
         {/* Beauty */}
         <div className="mt-16">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <motion.div
+            className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8"
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT}
+            variants={fadeInUp}
+          >
             <SectionHeading
               eyebrow="Aesthetic & Beauty"
               title="Refresh, Rejuvenate, Radiate"
@@ -59,12 +81,18 @@ export function ServicesGrid() {
             >
               View all beauty services <ArrowRight size={16} />
             </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          </motion.div>
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT}
+            variants={staggerContainer}
+          >
             {featuredBeauty.map((service, i) => (
               <ServiceCard key={service.id} service={service} index={i} />
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

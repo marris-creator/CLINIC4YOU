@@ -6,7 +6,7 @@ import { CLINIC } from "@/lib/data";
 
 export default function TopBar() {
   return (
-    <div className="hidden md:block bg-navy-950 text-navy-200 text-sm">
+    <div className="hidden md:block bg-navy-950 text-slate-300 text-sm">
       <div className="container-xl flex items-center justify-between py-2">
         {/* Left — contact snippets */}
         <div className="flex items-center gap-6">
@@ -31,7 +31,7 @@ export default function TopBar() {
         {/* Right — CTA */}
         <Link
           href="/booking"
-          className="bg-teal-500 hover:bg-teal-400 text-white font-semibold px-5 py-1.5 rounded-full text-xs transition-colors focus-visible:ring-2 focus-visible:ring-teal-300 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950"
+          className="bg-teal-500 hover:bg-teal-400 text-slate-50 font-semibold px-5 py-1.5 rounded-full text-xs transition-colors focus-visible:ring-2 focus-visible:ring-teal-300 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-950"
         >
           Book Appointment
         </Link>

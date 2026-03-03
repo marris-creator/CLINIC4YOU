@@ -1,17 +1,22 @@
 @import "tailwindcss";
 
+/* ─── CSS Custom Properties ──────────────────────────────────────────────── */
 :root {
-  --font-sora: "Sora", sans-serif;
-  --font-dm-serif: "DM Serif Display", serif;
+  --font-sora: "Sora", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-dm-serif: "DM Serif Display", "Georgia", serif;
 }
 
+/* ─── Base ───────────────────────────────────────────────────────────────── */
 @layer base {
-  * {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
@@ -20,24 +25,32 @@
     color: #1c1c2e;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
 
   h1, h2, h3 {
     font-family: var(--font-dm-serif);
+    line-height: 1.15;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }
 
+/* ─── Utilities ──────────────────────────────────────────────────────────── */
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  .text-pretty {
-    text-wrap: pretty;
-  }
+  .text-balance { text-wrap: balance; }
+  .text-pretty  { text-wrap: pretty; }
+
   .section-padding {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+
   .container-xl {
     max-width: 1280px;
     margin-left: auto;
@@ -47,29 +60,43 @@
   }
 }
 
-/* Smooth scroll offset for sticky header */
 [id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 84px;
 }
 
 /* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #f1ebd6;
-}
-::-webkit-scrollbar-thumb {
-  background: #1ea7b5;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #168797;
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1ebd6; }
+::-webkit-scrollbar-thumb { background: #1ea7b5; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #168797; }
 
-/* Focus styles for accessibility */
+/* Focus visible */
 :focus-visible {
   outline: 2px solid #1ea7b5;
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* GPU compositing hint for animated elements */
+[data-framer-animate] {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Selection colour */
+::selection {
+  background-color: rgba(30, 167, 181, 0.25);
+  color: #080f28;
 }

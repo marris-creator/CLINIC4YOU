@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { ServicesGrid } from "@/components/sections/ServicesGrid";
 import { PRSIWidget } from "@/components/sections/PRSIWidget";
+import { ClinicGallery } from "@/components/sections/ClinicGallery";
 import { TeamPreview } from "@/components/sections/TeamPreview";
 import { Reviews } from "@/components/sections/Reviews";
 import { AppointmentCTA } from "@/components/sections/AppointmentCTA";
@@ -23,6 +24,7 @@ export default function HomePage() {
       <TrustBar />
       <ServicesGrid />
       <PRSIWidget />
+      <ClinicGallery />
       <TeamPreview />
       <Reviews />
       <AppointmentCTA />

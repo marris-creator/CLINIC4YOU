@@ -3,6 +3,7 @@ import "./globals.css";
 import TopBar from "@/components/layout/TopBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { MotionConfig } from "framer-motion";
 import { CLINIC } from "@/lib/data";
 
 const baseUrl = "https://clinic4u.ie";
@@ -131,10 +132,13 @@ export default function RootLayout({
         <LocalBusinessSchema />
       </head>
       <body className="min-h-screen flex flex-col">
-        <TopBar />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {/* MotionConfig: respects prefers-reduced-motion system setting globally */}
+        <MotionConfig reducedMotion="user">
+          <TopBar />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </MotionConfig>
       </body>
     </html>
   );

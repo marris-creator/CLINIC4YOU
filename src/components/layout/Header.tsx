@@ -125,7 +125,7 @@ export default function Header() {
           </a>
           <Link
             href="/booking"
-            className="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors shadow-md hover:shadow-glow"
+            className="bg-teal-500 hover:bg-teal-600 text-slate-50 font-semibold px-5 py-2.5 rounded-xl text-sm transition-colors shadow-md hover:shadow-glow"
           >
             Book Appointment
           </Link>
