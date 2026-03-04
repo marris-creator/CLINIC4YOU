@@ -26,10 +26,10 @@ export default function AboutPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-6">
             About Clinic4U
           </span>
-          <h1 className="font-display text-4xl md:text-6xl text-white mb-5 text-balance max-w-2xl">
+          <h1 className="font-display text-4xl md:text-6xl text-teal-100 mb-5 text-balance max-w-2xl">
             A Clinic Built on Expertise & Compassion
           </h1>
-          <p className="text-navy-200 text-lg max-w-xl leading-relaxed text-pretty">
+          <p className="text-teal-200 text-lg max-w-xl leading-relaxed text-pretty">
             Over 10 years of exceptional dental and aesthetic care in the heart of Dublin.
             Recently relocated to a brand new, state-of-the-art facility in Phibsborough — bigger,
             better equipped, and even more welcoming.

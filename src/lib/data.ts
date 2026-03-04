@@ -102,7 +102,7 @@ export const TEAM: TeamMember[] = [
       "Specialist in Orthodontics",
       "Clear Aligner Certified Practitioner",
     ],
-    image: "/images/team-hadil.svg",
+    image: "/images/team-hadil.jpg",
     languages: ["English", "Arabic", "Romanian"],
   },
 ];

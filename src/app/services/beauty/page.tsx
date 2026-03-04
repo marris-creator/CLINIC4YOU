@@ -20,10 +20,10 @@ export default function BeautyServicesPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-6">
             Beauty & Aesthetics
           </span>
-          <h1 className="font-display text-4xl md:text-6xl text-white mb-5 max-w-2xl text-balance">
+          <h1 className="font-display text-4xl md:text-6xl text-teal-100 mb-5 max-w-2xl text-balance">
             Refresh, Rejuvenate, Radiate
           </h1>
-          <p className="text-navy-200 text-lg max-w-xl text-pretty">
+          <p className="text-teal-200 text-lg max-w-xl text-pretty">
             Doctor-administered aesthetic treatments for safe, natural-looking results.
             Our medical team tailors every treatment to complement your unique features.
           </p>

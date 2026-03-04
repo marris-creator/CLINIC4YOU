@@ -33,7 +33,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-950 text-navy-200">
+    <footer className="bg-navy-950 text-teal-200">
       {/* Main footer */}
       <div className="container-xl py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -44,13 +44,13 @@ export default function Footer() {
                 4U
               </div>
               <div className="leading-tight">
-                <span className="block font-display text-white text-xl">Clinic4U</span>
+                <span className="block font-display text-teal-100 text-xl">Clinic4U</span>
                 <span className="block text-teal-400 text-2xs font-semibold uppercase tracking-widest -mt-1">
                   Dublin
                 </span>
               </div>
             </Link>
-            <p className="text-sm text-navy-300 leading-relaxed mb-6">
+            <p className="text-sm text-teal-200 leading-relaxed mb-6">
               Dublin's premier dental and aesthetic clinic. Family-friendly, specialist-led, and open
               6 days a week in the heart of Phibsborough.
             </p>
@@ -93,7 +93,7 @@ export default function Footer() {
           {/* Links columns */}
           {Object.entries(FOOTER_LINKS).map(([title, links]) => (
             <div key={title}>
-              <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
+              <h3 className="text-teal-100 font-semibold text-sm uppercase tracking-wider mb-4">
                 {title}
               </h3>
               <ul className="flex flex-col gap-2.5">
@@ -101,7 +101,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-navy-300 hover:text-teal-300 transition-colors"
+                      className="text-sm text-teal-200 hover:text-teal-100 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -120,7 +120,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`tel:${CLINIC.phone.replace(/\s/g, "")}`}
-                  className="flex items-start gap-2 text-navy-300 hover:text-teal-300 transition-colors"
+                  className="flex items-start gap-2 text-teal-200 hover:text-teal-100 transition-colors"
                 >
                   <Phone size={15} className="shrink-0 mt-0.5 text-teal-500" />
                   <span>{CLINIC.phone}</span>
@@ -129,7 +129,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`tel:${CLINIC.phoneMobile.replace(/\s/g, "")}`}
-                  className="flex items-start gap-2 text-navy-300 hover:text-teal-300 transition-colors"
+                  className="flex items-start gap-2 text-teal-200 hover:text-teal-100 transition-colors"
                 >
                   <Phone size={15} className="shrink-0 mt-0.5 text-teal-500" />
                   <span>{CLINIC.phoneMobile}</span>
@@ -138,7 +138,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${CLINIC.email}`}
-                  className="flex items-start gap-2 text-navy-300 hover:text-teal-300 transition-colors"
+                  className="flex items-start gap-2 text-teal-200 hover:text-teal-100 transition-colors"
                 >
                   <Mail size={15} className="shrink-0 mt-0.5 text-teal-500" />
                   <span>{CLINIC.email}</span>
@@ -149,7 +149,7 @@ export default function Footer() {
                   href={CLINIC.address.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-2 text-navy-300 hover:text-teal-300 transition-colors"
+                  className="flex items-start gap-2 text-teal-200 hover:text-teal-100 transition-colors"
                 >
                   <MapPin size={15} className="shrink-0 mt-0.5 text-teal-500" />
                   <span>{CLINIC.address.street}, {CLINIC.address.area}, {CLINIC.address.city}</span>
@@ -160,13 +160,13 @@ export default function Footer() {
             <div className="mt-5 pt-5 border-t border-navy-800">
               <div className="flex items-center gap-2 mb-3">
                 <Clock size={15} className="text-teal-500" />
-                <span className="text-white text-sm font-medium">Opening Hours</span>
+                <span className="text-teal-100 text-sm font-medium">Opening Hours</span>
               </div>
               <ul className="flex flex-col gap-1.5">
                 {HOURS.map((h) => (
                   <li key={h.day} className="flex justify-between text-sm">
-                    <span className="text-navy-400">{h.day}</span>
-                    <span className={h.time === "Closed" ? "text-navy-500" : "text-navy-200"}>
+                    <span className="text-teal-300">{h.day}</span>
+                    <span className={h.time === "Closed" ? "text-teal-400" : "text-teal-100"}>
                       {h.time}
                     </span>
                   </li>
@@ -180,10 +180,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-navy-800">
         <div className="container-xl flex flex-col sm:flex-row items-center justify-between gap-3 py-5">
-          <p className="text-xs text-navy-500">
+          <p className="text-xs text-teal-400">
             © {year} Clinic4U Dublin. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs text-navy-500">
+          <div className="flex items-center gap-4 text-xs text-teal-400">
             <Link href="/privacy-policy" className="hover:text-teal-400 transition-colors">
               Privacy Policy
             </Link>

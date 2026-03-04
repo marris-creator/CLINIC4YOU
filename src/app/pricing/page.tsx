@@ -21,10 +21,10 @@ export default function PricingPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-6">
             Pricing
           </span>
-          <h1 className="font-display text-4xl md:text-6xl text-white mb-5 max-w-2xl text-balance">
+          <h1 className="font-display text-4xl md:text-6xl text-teal-100 mb-5 max-w-2xl text-balance">
             Transparent Pricing, No Surprises
           </h1>
-          <p className="text-navy-200 text-lg max-w-xl text-pretty">
+          <p className="text-teal-200 text-lg max-w-xl text-pretty">
             All prices shown include treatment by a qualified specialist. Financing available
             through Humm. PRSI dental benefit accepted.
           </p>
@@ -84,7 +84,7 @@ export default function PricingPage() {
                 className="bg-white rounded-3xl shadow-card border border-sand-100 overflow-hidden"
               >
                 <div className="bg-gradient-to-r from-navy-900 to-teal-900 px-6 py-4">
-                  <h2 className="font-display text-xl text-white">{category.title}</h2>
+                  <h2 className="font-display text-xl text-teal-100">{category.title}</h2>
                 </div>
                 <div className="divide-y divide-sand-100">
                   {category.items.map((item) => (

@@ -20,10 +20,10 @@ export default function DentalServicesPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-6">
             Dental Services
           </span>
-          <h1 className="font-display text-4xl md:text-6xl text-white mb-5 max-w-2xl text-balance">
+          <h1 className="font-display text-4xl md:text-6xl text-teal-100 mb-5 max-w-2xl text-balance">
             Complete Dental Care in Dublin 7
           </h1>
-          <p className="text-navy-200 text-lg max-w-xl text-pretty">
+          <p className="text-teal-200 text-lg max-w-xl text-pretty">
             From everyday check-ups and cleaning to specialist implant surgery and orthodontics —
             all under one roof at Clinic4U Phibsborough.
           </p>

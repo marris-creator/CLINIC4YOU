@@ -46,10 +46,10 @@ export default async function DentalServicePage({ params }: Props) {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-4">
             Dental Treatment
           </span>
-          <h1 className="font-display text-4xl md:text-6xl text-white mb-5 max-w-2xl text-balance">
+          <h1 className="font-display text-4xl md:text-6xl text-teal-100 mb-5 max-w-2xl text-balance">
             {service.name}
           </h1>
-          <p className="text-navy-200 text-lg max-w-xl text-pretty mb-8">
+          <p className="text-teal-200 text-lg max-w-xl text-pretty mb-8">
             {service.shortDesc}
           </p>
           <div className="flex flex-wrap gap-3">
@@ -61,7 +61,7 @@ export default async function DentalServicePage({ params }: Props) {
             </Link>
             <a
               href={`tel:${CLINIC.phone.replace(/\s/g, "")}`}
-              className="flex items-center gap-2 border-2 border-white/30 hover:border-white/60 text-white font-semibold px-6 py-3 rounded-xl text-sm backdrop-blur-sm transition-colors"
+              className="flex items-center gap-2 border-2 border-teal-400/60 hover:border-teal-300 text-teal-100 font-semibold px-6 py-3 rounded-xl text-sm backdrop-blur-sm transition-colors"
             >
               <Phone size={16} /> {CLINIC.phone}
             </a>
@@ -114,9 +114,9 @@ export default async function DentalServicePage({ params }: Props) {
             {/* Sidebar */}
             <div className="flex flex-col gap-5">
               {/* Book card */}
-              <div className="bg-gradient-hero rounded-3xl p-6 text-white">
-                <h3 className="font-display text-xl mb-3">Ready to Get Started?</h3>
-                <p className="text-navy-200 text-sm mb-5">
+              <div className="bg-gradient-hero rounded-3xl p-6">
+                <h3 className="font-display text-teal-100 text-xl mb-3">Ready to Get Started?</h3>
+                <p className="text-teal-200 text-sm mb-5">
                   Book your consultation online or call us — emergency slots available daily.
                 </p>
                 <Link

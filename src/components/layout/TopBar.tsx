@@ -6,7 +6,7 @@ import { CLINIC } from "@/lib/data";
 
 export default function TopBar() {
   return (
-    <div className="hidden md:block bg-navy-950 text-slate-300 text-sm">
+    <div className="hidden md:block bg-navy-950 text-teal-200 text-sm">
       <div className="container-xl flex items-center justify-between py-2">
         {/* Left — contact snippets */}
         <div className="flex items-center gap-6">

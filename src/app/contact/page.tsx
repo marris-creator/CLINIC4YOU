@@ -30,10 +30,10 @@ export default function ContactPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-6">
             Contact Us
           </span>
-          <h1 className="font-display text-4xl md:text-6xl text-white mb-5 max-w-2xl text-balance">
+          <h1 className="font-display text-4xl md:text-6xl text-teal-100 mb-5 max-w-2xl text-balance">
             We'd Love to Hear From You
           </h1>
-          <p className="text-navy-200 text-lg max-w-xl text-pretty">
+          <p className="text-teal-200 text-lg max-w-xl text-pretty">
             Call, email, WhatsApp or stop by — we're here to help you book, answer questions,
             and make your visit as easy as possible.
           </p>
@@ -190,10 +190,10 @@ export default function ContactPage() {
 
               {/* Book CTA */}
               <div className="bg-gradient-hero rounded-3xl p-8 text-center">
-                <h3 className="font-display text-2xl text-white mb-3">
+                <h3 className="font-display text-2xl text-teal-100 mb-3">
                   Ready to Book?
                 </h3>
-                <p className="text-navy-200 text-sm mb-6">
+                <p className="text-teal-200 text-sm mb-6">
                   Book online, call us or send a WhatsApp — whatever's easiest for you.
                 </p>
                 <Link

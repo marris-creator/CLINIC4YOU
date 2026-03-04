@@ -25,23 +25,23 @@ export default function ServicesPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-6">
             All Services
           </span>
-          <h1 className="font-display text-4xl md:text-6xl text-white mb-5 text-balance">
+          <h1 className="font-display text-4xl md:text-6xl text-teal-100 mb-5 text-balance">
             Complete Dental & Aesthetic Care
           </h1>
-          <p className="text-navy-200 text-lg max-w-xl mx-auto text-pretty">
+          <p className="text-teal-200 text-lg max-w-xl mx-auto text-pretty">
             From your first check-up to advanced implant surgery and aesthetic treatments —
             all delivered by specialists under one roof.
           </p>
           <div className="flex flex-wrap gap-4 justify-center mt-8">
             <a
               href="#dental"
-              className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors"
+              className="bg-teal-900/40 hover:bg-teal-800/50 border border-teal-500/40 text-teal-100 font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors"
             >
               Dental Treatments
             </a>
             <a
               href="#beauty"
-              className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors"
+              className="bg-teal-900/40 hover:bg-teal-800/50 border border-teal-500/40 text-teal-100 font-semibold px-6 py-2.5 rounded-xl text-sm transition-colors"
             >
               Beauty & Aesthetics
             </a>
