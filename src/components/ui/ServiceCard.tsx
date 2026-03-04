@@ -56,7 +56,7 @@ export function ServiceCard({ service, index = 0 }: ServiceCardProps) {
     >
       <Link
         href={href}
-        className="group bg-white rounded-3xl p-6 shadow-card border border-sand-100 hover:border-teal-200 transition-colors duration-300 flex flex-col gap-4 h-full"
+        className="group bg-gradient-to-br from-white to-teal-50/50 rounded-3xl p-6 shadow-card border border-teal-100/60 hover:border-teal-300 transition-colors duration-300 flex flex-col gap-4 h-full"
       >
         {/* Icon */}
         <div className="w-12 h-12 rounded-2xl bg-teal-50 group-hover:bg-teal-100 flex items-center justify-center transition-colors duration-300">

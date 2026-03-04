@@ -51,7 +51,7 @@ export default function Header() {
       <div className="container-xl flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group" aria-label="Clinic4U Home">
-          <div className="w-9 h-9 rounded-xl bg-gradient-teal flex items-center justify-center text-white font-display text-lg font-bold shadow-glow group-hover:scale-105 transition-transform">
+          <div className="w-9 h-9 rounded-xl bg-gradient-teal flex items-center justify-center text-slate-200 font-display text-lg font-bold shadow-glow group-hover:scale-105 transition-transform">
             4U
           </div>
           <div className="leading-tight">
@@ -183,7 +183,7 @@ export default function Header() {
               </a>
               <Link
                 href="/booking"
-                className="bg-teal-500 text-white font-semibold px-5 py-3 rounded-xl text-sm text-center transition-colors hover:bg-teal-600"
+                className="bg-teal-500 text-slate-200 font-semibold px-5 py-3 rounded-xl text-sm text-center transition-colors hover:bg-teal-600"
               >
                 Book Appointment
               </Link>

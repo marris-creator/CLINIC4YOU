@@ -27,7 +27,7 @@ export function AppointmentCTA({
         variants={fadeInUp}
       >
         <div className="container-xl flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-slate-50 font-semibold text-lg text-center sm:text-left">{title}</p>
+          <p className="text-slate-200 font-semibold text-lg text-center sm:text-left">{title}</p>
           <div className="flex flex-wrap items-center gap-3 justify-center">
             <Link
               href="/booking"
@@ -37,7 +37,7 @@ export function AppointmentCTA({
             </Link>
             <a
               href={`tel:${CLINIC.phone.replace(/\s/g, "")}`}
-              className="border border-white/50 hover:border-white text-slate-50 font-semibold px-6 py-2.5 rounded-xl text-sm hover:bg-white/10 transition-colors flex items-center gap-2"
+              className="border border-white/50 hover:border-white text-slate-200 font-semibold px-6 py-2.5 rounded-xl text-sm hover:bg-white/10 transition-colors flex items-center gap-2"
             >
               <Phone size={16} />
               {CLINIC.phone}
@@ -70,7 +70,7 @@ export function AppointmentCTA({
           </motion.span>
           <motion.h2
             variants={fadeInUp}
-            className="font-display text-3xl md:text-5xl text-slate-50 mb-4 text-balance"
+            className="font-display text-3xl md:text-5xl text-slate-200 mb-4 text-balance"
           >
             {title}
           </motion.h2>
@@ -98,7 +98,7 @@ export function AppointmentCTA({
                 label: CLINIC.phone,
                 icon: Phone,
                 className:
-                  "flex items-center gap-2 border-2 border-white/30 hover:border-white/60 text-slate-100 font-semibold px-8 py-4 rounded-2xl text-base backdrop-blur-sm transition-all active:scale-[0.98]",
+                  "flex items-center gap-2 border-2 border-white/30 hover:border-white/60 text-slate-300 font-semibold px-8 py-4 rounded-2xl text-base backdrop-blur-sm transition-all active:scale-[0.98]",
               },
               {
                 href: `https://wa.me/${CLINIC.whatsapp}`,

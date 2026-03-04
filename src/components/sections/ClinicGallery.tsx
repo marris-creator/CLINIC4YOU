@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { imageReveal, slideInLeft, slideInRight, fadeInUp, staggerContainer, VIEWPORT } from "@/lib/animations";
 
@@ -11,6 +12,7 @@ const GALLERY_ITEMS = [
     gradient: "from-teal-900 to-navy-900",
     accent: "bg-teal-500",
     size: "large",
+    img: "/images/clinic-dental-suite.svg",
   },
   {
     id: "g2",
@@ -19,6 +21,7 @@ const GALLERY_ITEMS = [
     gradient: "from-navy-800 to-teal-800",
     accent: "bg-navy-600",
     size: "small",
+    img: "/images/clinic-aesthetic-room.svg",
   },
   {
     id: "g3",
@@ -27,6 +30,7 @@ const GALLERY_ITEMS = [
     gradient: "from-teal-800 to-navy-800",
     accent: "bg-teal-600",
     size: "small",
+    img: "/images/clinic-reception.svg",
   },
   {
     id: "g4",
@@ -35,6 +39,7 @@ const GALLERY_ITEMS = [
     gradient: "from-navy-900 to-teal-900",
     accent: "bg-teal-500",
     size: "medium",
+    img: "/images/clinic-consultation.svg",
   },
   {
     id: "g5",
@@ -43,6 +48,7 @@ const GALLERY_ITEMS = [
     gradient: "from-teal-900 to-navy-800",
     accent: "bg-navy-700",
     size: "medium",
+    img: "/images/clinic-dental-suite.svg",
   },
 ];
 
@@ -72,6 +78,19 @@ function GalleryCell({
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 260, damping: 22 }}
     >
+      {/* Actual image with gradient overlay */}
+      {item.img && (
+        <Image
+          src={item.img}
+          alt={item.label}
+          fill
+          className="object-cover opacity-60 group-hover:opacity-75 transition-opacity duration-500"
+          sizes="(max-width: 768px) 50vw, 25vw"
+          unoptimized
+        />
+      )}
+      {/* Gradient overlay for text legibility */}
+      <div className={`absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent`} />
       {/* Decorative inner glow */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-teal-500/10 transition-opacity duration-500" />
       {/* Diagonal shine */}
@@ -81,7 +100,7 @@ function GalleryCell({
         <div
           className={`w-8 h-1 rounded-full ${item.accent} mb-3 transition-all duration-300 group-hover:w-16`}
         />
-        <h3 className="font-display text-slate-100 text-lg leading-tight mb-1">{item.label}</h3>
+        <h3 className="font-display text-slate-300 text-lg leading-tight mb-1">{item.label}</h3>
         <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
       </div>
     </motion.div>
@@ -109,7 +128,7 @@ export function ClinicGallery() {
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-800 px-3 py-1 rounded-full mb-4">
               Our Clinic
             </span>
-            <h2 id="gallery-heading" className="font-display text-3xl md:text-5xl text-slate-100 text-balance leading-tight">
+            <h2 id="gallery-heading" className="font-display text-3xl md:text-5xl text-slate-200 text-balance leading-tight">
               A Space Built for Your <em className="not-italic text-teal-300">Comfort</em>
             </h2>
           </motion.div>

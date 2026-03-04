@@ -38,12 +38,12 @@ export function Reviews() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-800 px-3 py-1 rounded-full mb-3">
             Patient Reviews
           </span>
-          <h2 id="reviews-heading" className="font-display text-3xl md:text-4xl text-slate-100 mb-4">
+          <h2 id="reviews-heading" className="font-display text-3xl md:text-4xl text-slate-200 mb-4">
             What Our Patients Say
           </h2>
           <div className="inline-flex items-center gap-4 bg-white/5 border border-white/10 rounded-2xl px-6 py-3">
             <div>
-              <span className="font-display text-slate-100 text-3xl">{CLINIC.rating}</span>
+              <span className="font-display text-slate-200 text-3xl">{CLINIC.rating}</span>
               <span className="text-slate-400 text-sm ml-1">/ 5</span>
             </div>
             <div>
@@ -78,7 +78,7 @@ export function Reviews() {
                 </blockquote>
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div>
-                    <cite className="not-italic font-semibold text-slate-100">
+                    <cite className="not-italic font-semibold text-slate-200">
                       {TESTIMONIALS[active].name}
                     </cite>
                     {TESTIMONIALS[active].treatment && (

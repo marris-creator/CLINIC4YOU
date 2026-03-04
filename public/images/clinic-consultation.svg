@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0e2050"/>
+      <stop offset="100%" style="stop-color:#1ea7b5"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg4)"/>
+  <!-- Desk -->
+  <rect x="180" y="310" width="440" height="15" rx="4" fill="#38bdc8" opacity="0.7"/>
+  <rect x="190" y="325" width="420" height="80" rx="4" fill="#156b79" opacity="0.5"/>
+  <!-- Monitor -->
+  <rect x="330" y="210" width="140" height="100" rx="8" fill="#080f28" opacity="0.9"/>
+  <rect x="340" y="220" width="120" height="80" rx="4" fill="#1ea7b5" opacity="0.2"/>
+  <rect x="385" y="310" width="30" height="8" rx="2" fill="#156b79" opacity="0.8"/>
+  <!-- Chair (doctor side) -->
+  <ellipse cx="310" cy="400" rx="50" ry="20" fill="#1ea7b5" opacity="0.35"/>
+  <rect x="285" y="340" width="50" height="60" rx="8" fill="#1ea7b5" opacity="0.35"/>
+  <!-- Books / files -->
+  <rect x="540" y="270" width="60" height="45" rx="4" fill="#168797" opacity="0.6"/>
+  <rect x="548" y="275" width="44" height="35" rx="2" fill="#1ea7b5" opacity="0.3"/>
+  <!-- Window -->
+  <rect x="80" y="100" width="160" height="180" rx="4" fill="#edfafa" opacity="0.1"/>
+  <line x1="160" y1="100" x2="160" y2="280" stroke="#edfafa" stroke-width="2" opacity="0.2"/>
+  <line x1="80" y1="190" x2="240" y2="190" stroke="#edfafa" stroke-width="2" opacity="0.2"/>
+  <!-- Diploma on wall -->
+  <rect x="570" y="110" width="130" height="100" rx="6" fill="#edfafa" opacity="0.08"/>
+  <rect x="580" y="120" width="110" height="80" rx="4" fill="#edfafa" opacity="0.05"/>
+  <!-- Floor -->
+  <rect x="0" y="410" width="800" height="190" fill="#040818" opacity="0.4"/>
+  <!-- Label -->
+  <text x="400" y="530" font-family="Georgia, serif" font-size="22" fill="#edfafa" text-anchor="middle" opacity="0.85">Private Consultation Room</text>
+  <text x="400" y="558" font-family="Arial, sans-serif" font-size="14" fill="#74d7de" text-anchor="middle" opacity="0.7">Clinic4U · Phibsborough, Dublin 7</text>
+</svg>

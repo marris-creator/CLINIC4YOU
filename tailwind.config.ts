@@ -68,9 +68,14 @@ const config: Config = {
         glow: "0 0 32px rgba(30,167,181,0.25)",
       },
       backgroundImage: {
-        "gradient-hero": "linear-gradient(135deg, #080f28 0%, #0e2050 50%, #145564 100%)",
-        "gradient-teal": "linear-gradient(135deg, #1ea7b5 0%, #168797 100%)",
+        "gradient-hero":    "linear-gradient(135deg, #080f28 0%, #0e2050 50%, #145564 100%)",
+        "gradient-teal":    "linear-gradient(135deg, #1ea7b5 0%, #168797 100%)",
         "gradient-section": "linear-gradient(180deg, #f8f7f4 0%, #edfafa 100%)",
+        // Varied green/teal section backgrounds — each section gets a different shade
+        "gradient-mint":    "linear-gradient(165deg, #edfafa 0%, #d5f5f6 60%, #edfafa 100%)",
+        "gradient-sage":    "linear-gradient(150deg, #f0fdf9 0%, #edfafa 50%, #f0fdf4 100%)",
+        "gradient-seafoam": "linear-gradient(160deg, #edfafa 0%, #d5f5f6 40%, #f0fdf9 100%)",
+        "gradient-prsi":    "linear-gradient(180deg, #f0fdf9 0%, #edfafa 100%)",
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out forwards",

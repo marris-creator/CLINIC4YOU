@@ -13,7 +13,7 @@ export function ServicesGrid() {
   const featuredBeauty = BEAUTY_SERVICES.slice(0, 4);
 
   return (
-    <section className="section-padding bg-white" id="services">
+    <section className="section-padding bg-gradient-sage" id="services">
       <div className="container-xl">
         {/* Dental */}
         <div className="mb-16">
@@ -55,7 +55,7 @@ export function ServicesGrid() {
             <div className="w-full border-t border-sand-200" />
           </div>
           <div className="relative flex justify-center">
-            <span className="bg-white px-6 py-1 rounded-full border border-sand-200 text-sand-400 text-xs font-semibold uppercase tracking-wider">
+            <span className="bg-teal-50 px-6 py-1 rounded-full border border-teal-100 text-teal-600 text-xs font-semibold uppercase tracking-wider">
               &amp; Also
             </span>
           </div>

@@ -50,7 +50,7 @@ const TRUST_ITEMS = [
 
 export function TrustBar() {
   return (
-    <section className="section-padding bg-offwhite" aria-labelledby="trust-heading">
+    <section className="section-padding bg-gradient-mint" aria-labelledby="trust-heading">
       <div className="container-xl">
         {/* Header */}
         <motion.div
@@ -89,7 +89,7 @@ export function TrustBar() {
               variants={scaleIn}
               whileHover={{ y: -6, boxShadow: "0 12px 40px -8px rgba(8,15,40,0.16)" }}
               transition={{ type: "spring", stiffness: 280, damping: 22 }}
-              className="group bg-white rounded-3xl p-6 shadow-card border border-sand-100 cursor-default"
+              className="group bg-gradient-to-br from-white to-teal-50/70 rounded-3xl p-6 shadow-card border border-teal-100/80 cursor-default"
             >
               <div
                 className={`w-12 h-12 rounded-2xl ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}

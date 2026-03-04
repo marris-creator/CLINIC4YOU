@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, GraduationCap } from "lucide-react";
@@ -8,7 +9,7 @@ import { fadeInUp, staggerContainer, scaleIn, VIEWPORT } from "@/lib/animations"
 
 export function TeamPreview() {
   return (
-    <section className="section-padding bg-offwhite" aria-labelledby="team-heading">
+    <section className="section-padding bg-gradient-seafoam" aria-labelledby="team-heading">
       <div className="container-xl">
         {/* Header */}
         <motion.div
@@ -55,31 +56,25 @@ export function TeamPreview() {
             >
               <Link
                 href={`/about#${member.id}`}
-                className="group bg-white rounded-3xl overflow-hidden shadow-card hover:shadow-card-hover border border-sand-100 hover:border-teal-200 transition-colors duration-300 flex flex-col h-full"
+                className="group bg-gradient-to-br from-white to-teal-50/50 rounded-3xl overflow-hidden shadow-card hover:shadow-card-hover border border-teal-100/70 hover:border-teal-300 transition-colors duration-300 flex flex-col h-full"
               >
-                {/* Photo placeholder — gradient with initials */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-navy-800 to-teal-900 flex items-center justify-center relative overflow-hidden">
-                  {/* Background pattern */}
-                  <div
-                    className="absolute inset-0 opacity-10"
-                    style={{
-                      backgroundImage:
-                        "radial-gradient(circle at 30% 70%, rgba(30,167,181,0.6) 0%, transparent 60%), radial-gradient(circle at 70% 20%, rgba(14,32,80,0.8) 0%, transparent 60%)",
-                    }}
-                  />
-                  <div className="w-20 h-20 rounded-full bg-white/10 border-2 border-white/25 flex items-center justify-center relative z-10">
-                    <span className="font-display text-slate-100 text-2xl">
-                      {member.name
-                        .split(" ")
-                        .filter((w) => w !== "Dr.")
-                        .map((w) => w[0])
-                        .join("")
-                        .slice(0, 2)}
-                    </span>
-                  </div>
+                {/* Photo */}
+                <div className="aspect-[4/3] bg-gradient-to-br from-navy-800 to-teal-900 relative overflow-hidden">
+                  {member.image && (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      unoptimized
+                    />
+                  )}
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent" />
                   {/* Specialty badge */}
-                  <div className="absolute bottom-3 left-3 right-3">
-                    <span className="inline-block bg-teal-500/85 text-slate-50 text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
+                  <div className="absolute bottom-3 left-3 right-3 z-10">
+                    <span className="inline-block bg-teal-500/85 text-slate-200 text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
                       {member.specialty}
                     </span>
                   </div>

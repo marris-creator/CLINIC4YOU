@@ -70,7 +70,7 @@ export function Hero() {
             <motion.h1
               custom={0.1}
               variants={heroLine}
-              className="font-display text-5xl md:text-6xl lg:text-7xl text-slate-50 leading-[1.08] mb-6 text-balance"
+              className="font-display text-5xl md:text-6xl lg:text-7xl text-slate-200 leading-[1.08] mb-6 text-balance"
             >
               Your Smile,{" "}
               <em className="not-italic text-teal-300">Expertly</em> Cared For
@@ -98,7 +98,7 @@ export function Hero() {
               </Link>
               <a
                 href={`tel:${CLINIC.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-2 border-2 border-white/30 hover:border-teal-400/60 text-slate-100 hover:text-teal-200 font-semibold px-6 py-4 rounded-2xl text-base backdrop-blur-sm transition-all duration-200 active:scale-[0.97]"
+                className="flex items-center gap-2 border-2 border-white/30 hover:border-teal-400/60 text-slate-300 hover:text-teal-200 font-semibold px-6 py-4 rounded-2xl text-base backdrop-blur-sm transition-all duration-200 active:scale-[0.97]"
               >
                 <Phone size={18} />
                 {CLINIC.phone}
@@ -123,7 +123,7 @@ export function Hero() {
                 >
                   <badge.icon size={17} className="text-teal-300 shrink-0" />
                   <div>
-                    <div className="text-slate-100 text-sm font-semibold leading-none">
+                    <div className="text-slate-300 text-sm font-semibold leading-none">
                       {badge.label}
                     </div>
                     <div className="text-slate-400 text-2xs mt-0.5">{badge.sub}</div>
@@ -204,7 +204,7 @@ export function Hero() {
       {/* Wave */}
       <div className="absolute bottom-0 left-0 right-0 pointer-events-none" aria-hidden="true">
         <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full">
-          <path d="M0 80L48 69.3C96 58.7 192 37.3 288 32C384 26.7 480 37.3 576 48C672 58.7 768 69.3 864 64C960 58.7 1056 37.3 1152 32C1248 26.7 1344 37.3 1392 42.7L1440 48V80H0Z" fill="#f8f7f4" />
+          <path d="M0 80L48 69.3C96 58.7 192 37.3 288 32C384 26.7 480 37.3 576 48C672 58.7 768 69.3 864 64C960 58.7 1056 37.3 1152 32C1248 26.7 1344 37.3 1392 42.7L1440 48V80H0Z" fill="#edfafa" />
         </svg>
       </div>
 

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#145564"/>
+      <stop offset="100%" style="stop-color:#0e2050"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  <!-- Floor -->
+  <rect x="0" y="400" width="800" height="200" fill="#080f28" opacity="0.5"/>
+  <!-- Reception desk -->
+  <rect x="150" y="320" width="500" height="90" rx="10" fill="#156b79" opacity="0.8"/>
+  <rect x="140" y="350" width="520" height="10" rx="4" fill="#38bdc8" opacity="0.6"/>
+  <!-- Computer -->
+  <rect x="320" y="250" width="160" height="100" rx="8" fill="#0e2050" opacity="0.9"/>
+  <rect x="330" y="260" width="140" height="80" rx="4" fill="#1ea7b5" opacity="0.25"/>
+  <rect x="380" y="350" width="40" height="10" rx="2" fill="#0e2050" opacity="0.8"/>
+  <!-- Plants -->
+  <circle cx="140" cy="300" r="40" fill="#168797" opacity="0.5"/>
+  <circle cx="120" cy="320" r="30" fill="#1ea7b5" opacity="0.4"/>
+  <rect x="150" y="340" width="10" height="60" rx="4" fill="#145564" opacity="0.7"/>
+  <!-- Chairs -->
+  <rect x="80" y="390" width="80" height="40" rx="8" fill="#1ea7b5" opacity="0.4"/>
+  <rect x="640" y="390" width="80" height="40" rx="8" fill="#1ea7b5" opacity="0.4"/>
+  <!-- Ceiling lights -->
+  <circle cx="250" cy="80" r="15" fill="#74d7de" opacity="0.5"/>
+  <circle cx="400" cy="80" r="15" fill="#74d7de" opacity="0.5"/>
+  <circle cx="550" cy="80" r="15" fill="#74d7de" opacity="0.5"/>
+  <!-- Logo on wall -->
+  <circle cx="400" cy="200" r="50" fill="none" stroke="#38bdc8" stroke-width="3" opacity="0.4"/>
+  <text x="400" y="208" font-family="Georgia, serif" font-size="28" fill="#38bdc8" text-anchor="middle" opacity="0.6">4U</text>
+  <!-- Label -->
+  <text x="400" y="530" font-family="Georgia, serif" font-size="22" fill="#edfafa" text-anchor="middle" opacity="0.85">Welcoming Reception</text>
+  <text x="400" y="558" font-family="Arial, sans-serif" font-size="14" fill="#74d7de" text-anchor="middle" opacity="0.7">Clinic4U · Phibsborough, Dublin 7</text>
+</svg>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { GraduationCap, Globe, ArrowRight } from "lucide-react";
 import { TEAM, CLINIC } from "@/lib/data";
 import { AppointmentCTA } from "@/components/sections/AppointmentCTA";
@@ -25,7 +26,7 @@ export default function AboutPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-6">
             About Clinic4U
           </span>
-          <h1 className="font-display text-4xl md:text-6xl text-white mb-5 text-balance max-w-2xl">
+          <h1 className="font-display text-4xl md:text-6xl text-slate-200 mb-5 text-balance max-w-2xl">
             A Clinic Built on Expertise & Compassion
           </h1>
           <p className="text-navy-200 text-lg max-w-xl leading-relaxed text-pretty">
@@ -37,7 +38,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission section */}
-      <section className="section-padding bg-offwhite">
+      <section className="section-padding bg-gradient-mint">
         <div className="container-xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -71,7 +72,7 @@ export default function AboutPage() {
               ].map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-white rounded-3xl p-6 shadow-card border border-sand-100 text-center"
+                  className="bg-gradient-to-br from-white to-teal-50/60 rounded-3xl p-6 shadow-card border border-teal-100/70 text-center"
                 >
                   <div className="font-display text-4xl text-teal-600 mb-1">{stat.number}</div>
                   <div className="text-navy-500 text-sm">{stat.label}</div>
@@ -83,7 +84,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="section-padding bg-white" id="team">
+      <section className="section-padding bg-gradient-sage" id="team">
         <div className="container-xl">
           <SectionHeading
             eyebrow="Meet the Team"
@@ -104,17 +105,20 @@ export default function AboutPage() {
               >
                 {/* Photo */}
                 <div className={`lg:col-span-2 ${i % 2 === 1 ? "lg:order-last" : ""}`}>
-                  <div className="aspect-[3/4] bg-gradient-to-br from-navy-800 to-teal-900 flex items-center justify-center relative min-h-[280px]">
-                    <div className="text-center p-8">
-                      <div className="w-24 h-24 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center mx-auto mb-4">
-                        <span className="font-display text-white text-4xl">
-                          {member.name.replace("Dr. ", "").split(" ").map(w => w[0]).join("").slice(0, 2)}
-                        </span>
-                      </div>
-                      <p className="text-navy-300 text-sm font-medium">{member.specialty}</p>
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <span className="inline-block bg-teal-500/80 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
+                  <div className="aspect-[3/4] bg-gradient-to-br from-navy-800 to-teal-900 relative overflow-hidden min-h-[280px]">
+                    {member.image && (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        fill
+                        className="object-cover opacity-80"
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                        unoptimized
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4 z-10">
+                      <span className="inline-block bg-teal-500/80 text-slate-200 text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
                         {member.role}
                       </span>
                     </div>

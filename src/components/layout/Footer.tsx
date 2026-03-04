@@ -44,7 +44,7 @@ export default function Footer() {
                 4U
               </div>
               <div className="leading-tight">
-                <span className="block font-display text-white text-xl">Clinic4U</span>
+                <span className="block font-display text-slate-200 text-xl">Clinic4U</span>
                 <span className="block text-teal-400 text-2xs font-semibold uppercase tracking-widest -mt-1">
                   Dublin
                 </span>
@@ -93,7 +93,7 @@ export default function Footer() {
           {/* Links columns */}
           {Object.entries(FOOTER_LINKS).map(([title, links]) => (
             <div key={title}>
-              <h3 className="text-white font-semibold text-sm uppercase tracking-wider mb-4">
+              <h3 className="text-slate-200 font-semibold text-sm uppercase tracking-wider mb-4">
                 {title}
               </h3>
               <ul className="flex flex-col gap-2.5">
@@ -160,7 +160,7 @@ export default function Footer() {
             <div className="mt-5 pt-5 border-t border-navy-800">
               <div className="flex items-center gap-2 mb-3">
                 <Clock size={15} className="text-teal-500" />
-                <span className="text-white text-sm font-medium">Opening Hours</span>
+                <span className="text-slate-200 text-sm font-medium">Opening Hours</span>
               </div>
               <ul className="flex flex-col gap-1.5">
                 {HOURS.map((h) => (

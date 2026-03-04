@@ -7,7 +7,7 @@ import { staggerContainer, scaleIn, VIEWPORT } from "@/lib/animations";
 
 export function PRSIWidget() {
   return (
-    <section className="section-padding bg-gradient-section">
+    <section className="section-padding bg-gradient-prsi">
       <div className="container-xl">
         <motion.div
           className="grid md:grid-cols-2 gap-6"
@@ -21,7 +21,7 @@ export function PRSIWidget() {
             variants={scaleIn}
             whileHover={{ y: -4 }}
             transition={{ type: "spring", stiffness: 280, damping: 22 }}
-            className="bg-white rounded-3xl p-8 shadow-card border border-sand-100 flex gap-5"
+            className="bg-gradient-to-br from-white to-blue-50/50 rounded-3xl p-8 shadow-card border border-blue-100/60 flex gap-5"
           >
             <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center shrink-0">
               <ShieldCheck size={28} className="text-blue-600" />
@@ -58,7 +58,7 @@ export function PRSIWidget() {
             variants={scaleIn}
             whileHover={{ y: -4 }}
             transition={{ type: "spring", stiffness: 280, damping: 22 }}
-            className="bg-white rounded-3xl p-8 shadow-card border border-sand-100 flex gap-5"
+            className="bg-gradient-to-br from-white to-teal-50/60 rounded-3xl p-8 shadow-card border border-teal-100/70 flex gap-5"
           >
             <div className="w-14 h-14 rounded-2xl bg-teal-50 flex items-center justify-center shrink-0">
               <CreditCard size={28} className="text-teal-600" />
