@@ -26,7 +26,7 @@ export default function AboutPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-6">
             About Clinic4U
           </span>
-          <h1 className="font-display text-4xl md:text-6xl text-slate-200 mb-5 text-balance max-w-2xl">
+          <h1 className="font-display text-4xl md:text-6xl text-white mb-5 text-balance max-w-2xl">
             A Clinic Built on Expertise & Compassion
           </h1>
           <p className="text-navy-200 text-lg max-w-xl leading-relaxed text-pretty">
@@ -118,7 +118,7 @@ export default function AboutPage() {
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 z-10">
-                      <span className="inline-block bg-teal-500/80 text-slate-200 text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
+                      <span className="inline-block bg-teal-500/80 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
                         {member.role}
                       </span>
                     </div>

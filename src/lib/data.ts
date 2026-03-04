@@ -72,7 +72,7 @@ export const TEAM: TeamMember[] = [
       "Specialist Degree in Oral Surgery",
       "Periodontal & Peri-Implant Plastic Surgery — Universidad Complutense Madrid",
     ],
-    image: "/images/team-laura.svg",
+    image: "/images/team-laura.jpg",
     languages: ["English", "Spanish", "Polish"],
   },
   {
@@ -87,7 +87,7 @@ export const TEAM: TeamMember[] = [
       "Internship in Oral & Dental Surgery",
       "Specialisation: Oral & Maxillofacial Surgery",
     ],
-    image: "/images/team-sani.svg",
+    image: "/images/team-sani.jpg",
     languages: ["English", "French"],
   },
   {

@@ -21,7 +21,7 @@ export default function BookingPage() {
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-700/40 px-3 py-1 rounded-full mb-6">
             Book Online
           </span>
-          <h1 className="font-display text-4xl md:text-5xl text-slate-200 mb-4 text-balance">
+          <h1 className="font-display text-4xl md:text-5xl text-white mb-4 text-balance">
             Book Your Appointment
           </h1>
           <p className="text-navy-200 text-lg max-w-lg mx-auto text-pretty">

@@ -100,8 +100,8 @@ function GalleryCell({
         <div
           className={`w-8 h-1 rounded-full ${item.accent} mb-3 transition-all duration-300 group-hover:w-16`}
         />
-        <h3 className="font-display text-slate-300 text-lg leading-tight mb-1">{item.label}</h3>
-        <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
+        <h3 className="font-display text-white text-lg leading-tight mb-1">{item.label}</h3>
+        <p className="text-slate-200 text-xs leading-relaxed">{item.desc}</p>
       </div>
     </motion.div>
   );
@@ -128,13 +128,13 @@ export function ClinicGallery() {
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-300 bg-teal-900/30 border border-teal-800 px-3 py-1 rounded-full mb-4">
               Our Clinic
             </span>
-            <h2 id="gallery-heading" className="font-display text-3xl md:text-5xl text-slate-200 text-balance leading-tight">
+            <h2 id="gallery-heading" className="font-display text-3xl md:text-5xl text-white text-balance leading-tight">
               A Space Built for Your <em className="not-italic text-teal-300">Comfort</em>
             </h2>
           </motion.div>
 
           <motion.p
-            className="text-slate-400 text-lg leading-relaxed text-pretty self-end"
+            className="text-slate-200 text-lg leading-relaxed text-pretty self-end"
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT}
@@ -183,7 +183,7 @@ export function ClinicGallery() {
               className="bg-white/5 border border-white/8 rounded-2xl px-6 py-5 text-center hover:bg-white/8 transition-colors"
             >
               <div className="font-display text-3xl text-teal-300 mb-1">{stat.value}</div>
-              <div className="text-slate-400 text-sm">{stat.label}</div>
+              <div className="text-slate-200 text-sm">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

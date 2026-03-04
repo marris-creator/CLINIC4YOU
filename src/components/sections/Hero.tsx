@@ -70,7 +70,7 @@ export function Hero() {
             <motion.h1
               custom={0.1}
               variants={heroLine}
-              className="font-display text-5xl md:text-6xl lg:text-7xl text-slate-200 leading-[1.08] mb-6 text-balance"
+              className="font-display text-5xl md:text-6xl lg:text-7xl text-white leading-[1.08] mb-6 text-balance"
             >
               Your Smile,{" "}
               <em className="not-italic text-teal-300">Expertly</em> Cared For
@@ -79,7 +79,7 @@ export function Hero() {
             <motion.p
               custom={0.25}
               variants={heroLine}
-              className="text-slate-300 text-lg md:text-xl leading-relaxed mb-10 max-w-lg text-pretty"
+              className="text-slate-100 text-lg md:text-xl leading-relaxed mb-10 max-w-lg text-pretty"
             >
               Family dental practice and aesthetic medi-spa in the heart of Dublin.
               Specialist-led care, walk-in welcome — open late, 6 days a week.
@@ -98,7 +98,7 @@ export function Hero() {
               </Link>
               <a
                 href={`tel:${CLINIC.phone.replace(/\s/g, "")}`}
-                className="flex items-center gap-2 border-2 border-white/30 hover:border-teal-400/60 text-slate-300 hover:text-teal-200 font-semibold px-6 py-4 rounded-2xl text-base backdrop-blur-sm transition-all duration-200 active:scale-[0.97]"
+                className="flex items-center gap-2 border-2 border-white/40 hover:border-teal-400/80 text-white hover:text-teal-200 font-semibold px-6 py-4 rounded-2xl text-base backdrop-blur-sm transition-all duration-200 active:scale-[0.97]"
               >
                 <Phone size={18} />
                 {CLINIC.phone}
@@ -123,10 +123,10 @@ export function Hero() {
                 >
                   <badge.icon size={17} className="text-teal-300 shrink-0" />
                   <div>
-                    <div className="text-slate-300 text-sm font-semibold leading-none">
+                    <div className="text-white text-sm font-semibold leading-none">
                       {badge.label}
                     </div>
-                    <div className="text-slate-400 text-2xs mt-0.5">{badge.sub}</div>
+                    <div className="text-slate-200 text-2xs mt-0.5">{badge.sub}</div>
                   </div>
                 </div>
               ))}
@@ -148,10 +148,10 @@ export function Hero() {
                     <span className="text-teal-200 text-xs font-semibold">Dental Suite</span>
                   </div>
                   <div className="rounded-xl bg-navy-600/50 flex items-end p-3">
-                    <span className="text-slate-200 text-xs font-semibold">Aesthetic Room</span>
+                    <span className="text-white text-xs font-semibold">Aesthetic Room</span>
                   </div>
                   <div className="rounded-xl bg-navy-700/40 flex items-end p-3">
-                    <span className="text-slate-300 text-xs font-semibold">Reception</span>
+                    <span className="text-white text-xs font-semibold">Reception</span>
                   </div>
                   <div className="rounded-xl bg-teal-800/30 flex items-end p-3">
                     <span className="text-teal-200 text-xs font-semibold">Consultation</span>
@@ -216,7 +216,7 @@ export function Hero() {
         transition={{ delay: 1.4, duration: 0.6 }}
         aria-hidden="true"
       >
-        <span className="text-slate-400 text-xs tracking-widest uppercase">Scroll</span>
+        <span className="text-slate-200 text-xs tracking-widest uppercase">Scroll</span>
         <motion.div
           className="w-5 h-8 border-2 border-slate-500/40 rounded-full flex items-start justify-center pt-1.5"
           animate={{ opacity: [0.4, 1, 0.4] }}

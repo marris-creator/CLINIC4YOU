@@ -74,7 +74,7 @@ export function TeamPreview() {
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent" />
                   {/* Specialty badge */}
                   <div className="absolute bottom-3 left-3 right-3 z-10">
-                    <span className="inline-block bg-teal-500/85 text-slate-200 text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
+                    <span className="inline-block bg-teal-500/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
                       {member.specialty}
                     </span>
                   </div>

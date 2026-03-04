@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Phone, Calendar, ArrowLeft, Sparkles } from "lucide-react";
 import { BEAUTY_SERVICES, CLINIC } from "@/lib/data";
 import { AppointmentCTA } from "@/components/sections/AppointmentCTA";
+
+// Service-specific image galleries
+const SERVICE_IMAGES: Record<string, { src: string; alt: string; caption?: string }[]> = {
+  profhilo: [
+    { src: "/images/profhilo-product.jpg", alt: "Profhilo Haenkenium product", caption: "Profhilo® Haenkenium — antioxidant maintenance cream" },
+    { src: "/images/profhilo-lemon.jpg", alt: "Profhilo Haenkenium bottle", caption: "Pure, science-backed hyaluronic formulation" },
+  ],
+  "profhilo-before-after": [
+    { src: "/images/profhilo-before-after.jpg", alt: "Profhilo Body before and after results", caption: "Real patient results — Profhilo® Body treatment" },
+  ],
+};
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -70,7 +82,7 @@ export default async function BeautyServicePage({ params }: Props) {
       </section>
 
       {/* Content */}
-      <section className="section-padding bg-offwhite">
+      <section className="section-padding bg-gradient-sage">
         <div className="container-xl">
           <div className="grid lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
@@ -82,7 +94,7 @@ export default async function BeautyServicePage({ params }: Props) {
               </p>
 
               {service.highlights && (
-                <div className="bg-white rounded-3xl p-6 shadow-card border border-sand-100 mb-8">
+                <div className="bg-gradient-to-br from-white to-teal-50/50 rounded-3xl p-6 shadow-card border border-teal-100/60 mb-8">
                   <h3 className="font-semibold text-navy-900 mb-4 flex items-center gap-2">
                     <Sparkles size={16} className="text-teal-500" />
                     Treatment Highlights
@@ -95,6 +107,34 @@ export default async function BeautyServicePage({ params }: Props) {
                       </li>
                     ))}
                   </ul>
+                </div>
+              )}
+
+              {/* Profhilo product images */}
+              {SERVICE_IMAGES[slug] && (
+                <div className="mb-8">
+                  <h3 className="font-semibold text-navy-900 mb-4 flex items-center gap-2">
+                    <Sparkles size={16} className="text-teal-500" />
+                    The Product
+                  </h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    {SERVICE_IMAGES[slug].map((img) => (
+                      <div key={img.src} className="rounded-2xl overflow-hidden shadow-card border border-teal-100/60 bg-gradient-to-br from-white to-teal-50/40">
+                        <div className="relative aspect-square">
+                          <Image
+                            src={img.src}
+                            alt={img.alt}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 50vw, 25vw"
+                          />
+                        </div>
+                        {img.caption && (
+                          <p className="text-navy-600 text-xs px-3 py-2 leading-snug">{img.caption}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
 
@@ -141,8 +181,43 @@ export default async function BeautyServicePage({ params }: Props) {
         </div>
       </section>
 
+      {/* Before & After results — Profhilo only */}
+      {slug === "profhilo" && (
+        <section className="section-padding bg-gradient-mint">
+          <div className="container-xl">
+            <div className="text-center mb-10">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal-600 bg-teal-100 px-3 py-1 rounded-full mb-3">
+                Real Results
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl text-navy-900 mb-3">
+                Before &amp; After
+              </h2>
+              <p className="text-navy-600 max-w-lg mx-auto text-pretty">
+                Profhilo® Body treatment dramatically improves skin laxity, texture, and hydration across multiple body areas.
+              </p>
+            </div>
+            <div className="max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-card border border-teal-100/70">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/images/profhilo-before-after.jpg"
+                  alt="Profhilo Body before and after results showing improved skin laxity"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 768px"
+                />
+              </div>
+              <div className="bg-gradient-to-br from-white to-teal-50/60 px-6 py-4 border-t border-teal-100/60">
+                <p className="text-navy-600 text-sm text-center">
+                  <strong className="text-navy-900">Profhilo® Body</strong> — before &amp; after results showing improvement in skin laxity, hydration, and texture. Individual results may vary.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {others.length > 0 && (
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-gradient-sage">
           <div className="container-xl">
             <h2 className="font-display text-2xl text-navy-900 mb-8">Other Beauty Services</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
